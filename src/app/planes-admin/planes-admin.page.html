@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>planes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button routerLink="/crear-plan">Nuevo Plan</ion-button>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Lista de planes</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of planes">
+      <ion-button fill="outline" size="large" routerLink="/plan-admin">{{ item.title }}</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button routerLink="/actividad-admin">Volver</ion-button>
+
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-content>
+
+    <ion-card>
+  
+      <ion-card-header>
+        <ion-card-title>Plan</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+  
+        <ion-grid>
+  
+          <ion-row>
+  
+            <ion-col>
+              <ion-title>Ejercicio</ion-title>
+            </ion-col>
+  
+            <ion-col>
+              <ion-title>Series</ion-title>
+            </ion-col>
+  
+            <ion-col>
+              <ion-title>Repeticiones</ion-title>
+            </ion-col>
+  
+          </ion-row>
+  
+          <ion-row *ngFor="let item of ejercicios">
+  
+            <ion-col>
+              <ion-title>{{ item.ejercicio }}</ion-title>
+            </ion-col>
+  
+            <ion-col>
+              <ion-title>{{ item.series }}</ion-title>
+            </ion-col>
+  
+            <ion-col>
+              <ion-title>{{ item.repeticiones }}</ion-title>
+            </ion-col>
+  
+          </ion-row>
+  
+        </ion-grid>
+  
+        <ion-button routerLink="/planes-admin">Volver</ion-button>
+  
+      </ion-card-content>
+  
+    </ion-card>
+    
+  </ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>actividades-prof</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Lista de actividades</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let act of activities">
+      <ion-button routerLink="/actividad-prof">{{act.title}}</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button routerLink="/home-prof">Volver</ion-button>
+
+</ion-content>

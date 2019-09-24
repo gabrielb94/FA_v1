@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>balance-admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-label>Registrar</ion-label>
+  <form>
+    <ion-item>
+      <ion-label>fecha</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>tipo de operacion</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>a quien</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>concepto</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>monto</ion-label>
+    </ion-item>
+  </form>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Transacciones</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-grid>
+
+        <ion-row>
+
+          <ion-col>
+            <ion-title>Fecha</ion-title>
+          </ion-col>
+
+          <ion-col>
+            <ion-title>Concepto</ion-title>
+          </ion-col>
+
+          <ion-col>
+            <ion-title>Monto</ion-title>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row *ngFor="let tran of transacciones">
+
+          <ion-col>
+            <ion-title>{{ tran.fecha }}</ion-title>
+          </ion-col>
+
+          <ion-col>
+            <ion-title>{{ tran.concepto }}</ion-title>
+          </ion-col>
+
+          <ion-col>
+            <ion-title>{{ tran.monto }}</ion-title>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-button routerLink="/home-admin">Volver</ion-button>
+
+</ion-content>
